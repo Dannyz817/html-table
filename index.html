@@ -2,15 +2,53 @@
 <html>
 <head>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 60px;
+      background-color: #fff;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    code {
+      background-color: #f2f2f2;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 16px;
+    }
+
+    pre {
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      padding: 20px;
+      overflow-x: auto;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
     table {
       border-collapse: collapse;
-      width: 50%;
+      width: 80%;
       text-align: left;
+      margin: 30px 0;
     }
 
     th, td {
       border: 1px solid #ddd;
-      padding: 8px;
+      padding: 16px; /* Aumenta o espaçamento interno das células */
+      font-size: 16px;
     }
 
     th {
@@ -26,6 +64,47 @@
 </head>
 <body>
 
+  <h2>How to Use Cell Spanning in an HTML Table</h2>
+
+  <p>Perhaps you have come across cells that stretch across two or more columns or rows in a table. That's called cell spanning.</p>
+
+  <p>If you worked in programs like MS Office or Excel you have probably used the function by highlighting the cells and clicking the command, and voilà! You have it.</p>
+
+  <p>The same features can be applied in an HTML table by using two cell attributes, <code>colspan</code> for horizontal spanning and <code>rowspan</code> for vertical spanning. The two attributes are assigned numbers greater than zero which show the number of cells you wish to span.</p>
+
+  <p><strong>An Example with use of <code>span</code></strong></p>
+
+  <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Subject&lt;/th&gt;
+    &lt;th&gt;Marks&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Hillary&lt;/td&gt;
+    &lt;td&gt;Advanced Web&lt;/td&gt;
+    &lt;td&gt;75&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Operating System&lt;/td&gt;
+    &lt;td&gt;60&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Lary&lt;/td&gt;
+    &lt;td&gt;Advanced Web&lt;/td&gt;
+    &lt;td&gt;80&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Operating System&lt;/td&gt;
+    &lt;td&gt;75&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan="3"&gt;Total Average: 72.5&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+  </pre>
+
   <table>
     <tr>
       <th>NAME</th>
@@ -38,7 +117,7 @@
       <td>75</td>
     </tr>
     <tr>
-      <td>Operating Syatem</td>
+      <td>Operating System</td>
       <td>60</td>
     </tr>
     <tr>
@@ -47,7 +126,7 @@
       <td>80</td>
     </tr>
     <tr>
-      <td>Operating Syatem</td>
+      <td>Operating System</td>
       <td>75</td>
     </tr>
     <tr>
